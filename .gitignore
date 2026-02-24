@@ -1,0 +1,19 @@
+# Vite build output (From your local version)
+dist/
+dist-ssr/
+
+# Node.js dependencies (From the remote version)
+/node_modules
+/.yarn/unplugged
+/.yarn/install-state.gz
+/.yarn/cache
+/.pnp.*
+.yarn/*
+
+# Keep any other rules that were in either file...
+.env
+.env.*
+.local.env
+.local.env.*
+.DS_Store
+*.log
