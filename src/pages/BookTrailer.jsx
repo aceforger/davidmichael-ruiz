@@ -377,7 +377,7 @@ const BookTrailer = () => {
         </div>
 
         <div className="bg-white rounded-xl shadow-lg p-8 mt-10">
-          <h3 className="text-3xl font-serif text-gray-800 mb-6 text-center">The Hand Trilogy</h3>
+          <h3 className="text-3xl font-serif text-gray-800 mb-6 text-center">The Soul Trilogy</h3>
           <p className="text-lg leading-relaxed text-gray-600 mb-8 text-center max-w-3xl mx-auto">
             A sweeping saga of faith, family, and the enduring power of the human spirit. 
             It follow generations whose lives are woven together by friendship, tragedy, and an unshakeable 
