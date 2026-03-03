@@ -27,49 +27,6 @@ const BookTrailer = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
 
-          {/* Tesfa */}
-          <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
-            <div className="relative">
-              <div 
-                className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group"
-                onClick={() => playTrailer('/images/tesfa.mp4')}
-              >
-                <img 
-                  src="/images/tesfa.png" 
-                  alt="Tesfa" 
-                  className="w-full h-[50vh] object-contain p-4 transition-transform duration-700 group-hover:scale-105"
-                />
-                
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="bg-white/90 p-6 rounded-full transform transition-transform duration-500 group-hover:scale-110">
-                    <svg className="w-16 h-16 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                </div>
-                
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-lg font-medium">Watch the Trailer</p>
-                  <p className="text-sm opacity-90">1:00</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-6 text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-2">The Heart of Tesfa</h3>
-              <p className="text-gray-600 mb-4">Now available in stores and online</p>
-              <button 
-                onClick={() => playTrailer('/images/tesfa.mp4')}
-                className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
-              >
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                </svg>
-                Watch Trailer
-              </button>
-            </div>
-          </div>
-          
           {/* Jerim */}
           <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
             <div className="relative">
@@ -156,6 +113,51 @@ const BookTrailer = () => {
             </div>
           </div>
 
+          {/* Tesfa */}
+          <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+            <div className="relative">
+              <div 
+                className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group"
+                onClick={() => playTrailer('/images/tesfa.mp4')}
+              >
+                <img 
+                  src="/images/tesfa.png" 
+                  alt="Tesfa" 
+                  className="w-full h-[50vh] object-contain p-4 transition-transform duration-700 group-hover:scale-105"
+                />
+                
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="bg-white/90 p-6 rounded-full transform transition-transform duration-500 group-hover:scale-110">
+                    <svg className="w-16 h-16 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+                
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="text-lg font-medium">Watch the Trailer</p>
+                  <p className="text-sm opacity-90">1:00</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <h3 className="text-2xl font-serif text-gray-800 mb-2">The Heart of Tesfa</h3>
+              <p className="text-gray-600 mb-4">Now available in stores and online</p>
+              <button 
+                onClick={() => playTrailer('/images/tesfa.mp4')}
+                className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
+              >
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                </svg>
+                Watch Trailer
+              </button>
+            </div>
+          </div>
+          
+          
+
           {/* Peter */}
           <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
             <div className="relative">
@@ -199,7 +201,8 @@ const BookTrailer = () => {
             </div>
           </div>
 
-          {/* Africa */}
+
+          {/* Angels */}
           <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
             <div className="relative">
               <div 
@@ -207,7 +210,7 @@ const BookTrailer = () => {
                 onClick={() => playTrailer('/images/soon.mp4')}
               >
                 <img 
-                  src="/images/africa.png" 
+                  src="/images/angels.png" 
                   alt="The Hand of Peter" 
                   className="w-full h-[50vh] object-contain p-4 transition-transform duration-700 group-hover:scale-105"
                 />
@@ -242,7 +245,7 @@ const BookTrailer = () => {
             </div>
           </div>
 
-          {/* Angels */}
+          {/* Africa */}
           <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
             <div className="relative">
               <div 
@@ -250,7 +253,7 @@ const BookTrailer = () => {
                 onClick={() => playTrailer('/images/soon.mp4')}
               >
                 <img 
-                  src="/images/angels.png" 
+                  src="/images/africa.png" 
                   alt="The Hand of Peter" 
                   className="w-full h-[50vh] object-contain p-4 transition-transform duration-700 group-hover:scale-105"
                 />
