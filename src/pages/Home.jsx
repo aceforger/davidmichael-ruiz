@@ -676,7 +676,6 @@ function Home() {
             <div>
               <h4 className="border-b text-lg font-semibold mb-0 text-white">Connect</h4>
               <div className="flex gap-4 mb-4"></div>
-              <p className="text-gray-300 text-sm">(210) 367-4299</p>
               <p className="text-gray-300 text-sm">authordavidmichaelruiz@gmail.com</p>
             </div>
           </div>

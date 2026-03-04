@@ -15,11 +15,8 @@ const mockBooks = [
       { title: 'DAVID MICHAEL RUIZ', link: 'More Information >' },
     ],
     purchaseLinks: {
-      amazon: 'https://www.amazon.com/dp/1234567890',
-      appleBooks: 'https://books.apple.com/book/id123456789',
-      googlePlay: 'https://play.google.com/store/books/details?id=1234567890',
-      barnesAndNoble: 'https://www.barnesandnoble.com/w/1234567890',
-      kobo: 'https://www.kobo.com/us/en/ebook/1234567890'
+      amazon: 'https://www.amazon.com/Heart-Tesfa-David-Michael-Ruiz/dp/B0FM4P7BVW',
+      thenile: 'https://www.thenile.com.au/books/david-michael-ruiz/the-heart-of-tesfa/9798349539251?srsltid=AfmBOop2--HIrJT4CAeUEP8mktb1YdjL3Om1wO_fvHEjhiCoWtmVqWcp',
     }
   },
   { 
@@ -34,11 +31,9 @@ const mockBooks = [
       { title: 'DAVIN MICHAEL RUIZ', link: 'More Information >' },
     ],
     purchaseLinks: {
-      amazon: 'https://www.amazon.com/dp/1234567891',
-      appleBooks: 'https://books.apple.com/book/id123456791',
-      googlePlay: 'https://play.google.com/store/books/details?id=1234567891',
-      barnesAndNoble: 'https://www.barnesandnoble.com/w/1234567891',
-      kobo: 'https://www.kobo.com/us/en/ebook/1234567891'
+      amazon: 'https://www.amazon.com/Heart-Jerim-David-Michael-Ruiz/dp/B0FM6D842F/ref=sr_1_15?dib=eyJ2IjoiMSJ9.Ev_5d6K2QnaLym7rD6BUsKZrGq8voAi0eHis9uCUJABxyce6Ym5fN7cf4eByMO7bq4kC7vC_719BJ1ZLRxMUpBkAac7hmmMcrHM7i2yTLe66rs9xAwf17U2D82vwyWgejQU40x1PUwvYpX_Digs1qaruhqDBmLt5ibg_rU-zl2b3yQxL-36tzZdVUqCHKl02F3MVnIonAZ6vy0FOhNMSqLT6U6kn2csqMEtilMGmTF8.kfurqm0v6qgatN5gI1C20ccCzJKlEI9pjGdaH9WM6sw&dib_tag=se&qid=1772665223&refinements=p_27%3ADavid+Michael+Ruiz&s=books&sr=1-15&text=David+Michael+Ruiz',
+      thenile: 'https://www.thenile.com.au/books/david-michael-ruiz/the-heart-of-jerim/9798349519086?srsltid=AfmBOopq3cTFR5IoeeaNZjcj3mQ7XSE3k4xahfwFGQngjTZXcCW5Q6eY',
+      foyles: 'https://www.foyles.co.uk/book/the-heart-of-jerim/david-michael-ruiz/9798349519086?srsltid=AfmBOoooIPZtZMU9k1Uc7vZmpRIHJFakvLm1vMeOE6bZO32ThUWBFQyh',
     }
   },
   { 
@@ -53,11 +48,8 @@ const mockBooks = [
       { title: 'DAVIN MICHAEL RUIZ', link: 'More Information >' },
     ],
     purchaseLinks: {
-      amazon: 'https://www.amazon.com/dp/1234567892',
-      appleBooks: 'https://books.apple.com/book/id123456792',
-      googlePlay: 'https://play.google.com/store/books/details?id=1234567892',
-      barnesAndNoble: 'https://www.barnesandnoble.com/w/1234567892',
-      kobo: 'https://www.kobo.com/us/en/ebook/1234567892'
+      amazon: 'https://www.amazon.com/Heart-Always-David-Michael-Ruiz/dp/B0FM6DSYCG/ref=sr_1_11?dib=eyJ2IjoiMSJ9.Ev_5d6K2QnaLym7rD6BUsKZrGq8voAi0eHis9uCUJABxyce6Ym5fN7cf4eByMO7bq4kC7vC_719BJ1ZLRxMUpBkAac7hmmMcrHM7i2yTLe66rs9xAwf17U2D82vwyWgejQU40x1PUwvYpX_Digs1qaruhqDBmLt5ibg_rU-zl2b3yQxL-36tzZdVUqCHKl02F3MVnIonAZ6vy0FOhNMSqLT6U6kn2csqMEtilMGmTF8.kfurqm0v6qgatN5gI1C20ccCzJKlEI9pjGdaH9WM6sw&dib_tag=se&qid=1772665113&refinements=p_27%3ADavid+Michael+Ruiz&s=books&sr=1-11&text=David+Michael+Ruiz',
+      readings: 'https://www.readings.com.au/product/9798349538773/the-heart-of-always--david-michael-ruiz--2025--9798349538773',
     }
   }
 ];
@@ -103,6 +95,39 @@ function BookNewsDetails() {
       return text.substring(0, 300) + '...';
     }
     return text;
+  };
+
+  // Get store name from link type
+  const getStoreName = (key) => {
+    const storeNames = {
+      amazon: 'Amazon',
+      thenile: 'The Nile',
+      foyles: 'Foyles',
+      readings: 'Readings',
+      appleBooks: 'Apple Books',
+      googlePlay: 'Google Play',
+      barnesAndNoble: 'B&N',
+      kobo: 'Kobo'
+    };
+    return storeNames[key] || key;
+  };
+
+  // Get store icon
+  const getStoreIcon = (key) => {
+    switch(key) {
+      case 'amazon':
+        return <FaAmazon className="text-xs" />;
+      case 'appleBooks':
+        return <FaApple className="text-xs" />;
+      case 'googlePlay':
+        return <FaGooglePlay className="text-xs" />;
+      case 'barnesAndNoble':
+        return <FaBook className="text-xs" />;
+      case 'kobo':
+        return <FaBookOpen className="text-xs" />;
+      default:
+        return <FaBook className="text-xs" />;
+    }
   };
 
   if (loading) return (
@@ -186,69 +211,22 @@ function BookNewsDetails() {
                 </div>
 
                 {/* Purchase Links - Compact Grid */}
-                {book.purchaseLinks && (
+                {book.purchaseLinks && Object.keys(book.purchaseLinks).length > 0 && (
                   <div className="mb-3">
                     <h3 className="text-sm font-bold text-gray-800 mb-2 font-serif">Buy Now</h3>
                     <div className="grid grid-cols-3 gap-1.5">
-                      {book.purchaseLinks.amazon && (
+                      {Object.entries(book.purchaseLinks).map(([key, url]) => (
                         <a 
-                          href={book.purchaseLinks.amazon}
+                          key={key}
+                          href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-1 bg-[#FF9900] hover:bg-[#FF9900]/80 text-white py-1.5 px-2 rounded text-xs font-medium transition-colors"
+                          className="flex items-center justify-center gap-1 bg-blue-600 hover:bg-blue-700 text-white py-1.5 px-2 rounded text-xs font-medium transition-colors"
                         >
-                          <FaAmazon className="text-xs" />
-                          <span className="hidden sm:inline">Amazon</span>
+                          {getStoreIcon(key)}
+                          <span className="hidden sm:inline">{getStoreName(key)}</span>
                         </a>
-                      )}
-                      
-                      {book.purchaseLinks.appleBooks && (
-                        <a 
-                          href={book.purchaseLinks.appleBooks}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-1 bg-gray-800 hover:bg-gray-700 text-white py-1.5 px-2 rounded text-xs font-medium transition-colors"
-                        >
-                          <FaApple className="text-xs" />
-                          <span className="hidden sm:inline">Apple</span>
-                        </a>
-                      )}
-                      
-                      {book.purchaseLinks.googlePlay && (
-                        <a 
-                          href={book.purchaseLinks.googlePlay}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-1 bg-[#3bccff] hover:bg-[#3bccff]/80 text-white py-1.5 px-2 rounded text-xs font-medium transition-colors"
-                        >
-                          <FaGooglePlay className="text-xs" />
-                          <span className="hidden sm:inline">Google</span>
-                        </a>
-                      )}
-                      
-                      {book.purchaseLinks.barnesAndNoble && (
-                        <a 
-                          href={book.purchaseLinks.barnesAndNoble}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-1 bg-[#007a6b] hover:bg-[#007a6b]/80 text-white py-1.5 px-2 rounded text-xs font-medium transition-colors"
-                        >
-                          <FaBook className="text-xs" />
-                          <span className="hidden sm:inline">B&N</span>
-                        </a>
-                      )}
-                      
-                      {book.purchaseLinks.kobo && (
-                        <a 
-                          href={book.purchaseLinks.kobo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-1 bg-[#cc0000] hover:bg-[#cc0000]/80 text-white py-1.5 px-2 rounded text-xs font-medium transition-colors"
-                        >
-                          <FaBookOpen className="text-xs" />
-                          <span className="hidden sm:inline">Kobo</span>
-                        </a>
-                      )}
+                      ))}
                     </div>
                   </div>
                 )}
