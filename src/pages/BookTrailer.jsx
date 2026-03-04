@@ -231,7 +231,7 @@ const BookTrailer = () => {
             </div>
             
             <div className="mt-6 text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-2">Out of Africa</h3>
+              <h3 className="text-2xl font-serif text-gray-800 mb-2">Touched by Angels</h3>
               <p className="text-gray-600 mb-4">Coming Soon</p>
               <button 
                 onClick={() => playTrailer('/images/soon.mp4')}

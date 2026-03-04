@@ -73,13 +73,13 @@ function Home() {
     { id: '2', title: "The Heart of Jerim", type: "book", image: "/images/jerim.png", path: "/bookdetails/2" },
     { id: '3', title: "The Heart of Always", type: "book", image: "/images/always.png", path: "/bookdetails/3" },
     { id: '1', title: "The Heart of Tesfa", type: "book", image: "/images/tesfa.png", path: "/bookdetails/1" },
-    { id: '5', title: "Touched by Peter", type: "book", image: "/images/peter.png", path: "", status: "coming-soon" },
+    { id: '5', title: "The Hand of Peter", type: "book", image: "/images/peter.png", path: "", status: "coming-soon" },
     { id: '6', title: "Touched by Angels", type: "book", image: "/images/angels.png", path: "", status: "coming-soon" },
     { id: '4', title: "Out of Africa", type: "book", image: "/images/africa.png", path: "", status: "coming-soon" },
     { id: '2', title: "The Heart of Jerim", type: "ebook", image: "/images/jerim.png", path: "/ebook/2" },
     { id: '3', title: "The Heart of Always", type: "ebook", image: "/images/always.png", path: "/ebook/3" },
     { id: '1', title: "The Heart of Tesfa", type: "ebook", image: "/images/tesfa.png", path: "/ebook/1" },
-    { id: '5', title: "Touched by Peter", type: "ebook", image: "/images/peter.png", path: "", status: "coming-soon" },
+    { id: '5', title: "The Hand of Peter", type: "ebook", image: "/images/peter.png", path: "", status: "coming-soon" },
     { id: '6', title: "Touched by Angels", type: "ebook", image: "/images/angels.png", path: "", status: "coming-soon" },
     { id: '4', title: "Out of Africa", type: "ebook", image: "/images/africa.png", path: "", status: "coming-soon" },
   ];
@@ -413,11 +413,11 @@ function Home() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-sky-200/70 to-transparent z-10"></div>
               <div className="absolute bottom-0 left-0 p-3 z-20">
-                <h3 className="text-lg font-bold text-white mb-1 font-serif line-clamp-2">Touched by Peter</h3>
+                <h3 className="text-lg font-bold text-white mb-1 font-serif line-clamp-2">The Hand of Peter</h3>
               </div>
               <img
                 src="/images/peter.png"
-                alt="Touched by Peter"
+                alt="The Hand of Peter"
                 className="absolute inset-0 w-full h-full object-contain p-2 group-hover:opacity-0 transition"
               />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -573,11 +573,11 @@ function Home() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-sky-900/70 to-transparent z-10"></div>
               <div className="absolute bottom-0 left-0 p-3 z-20">
-                <h3 className="text-lg font-bold text-white mb-1 font-serif line-clamp-2">Touched by Peter</h3>
+                <h3 className="text-lg font-bold text-white mb-1 font-serif line-clamp-2">The Hand of Peter</h3>
               </div>
               <img
                 src="/images/peter.png"
-                alt="Touched by Peter eBook"
+                alt="The Hand of Peter eBook"
                 className="absolute inset-0 w-full h-full object-contain p-2 group-hover:opacity-0 transition"
               />
               <div className="absolute inset-0 flex items-center justify-center">
