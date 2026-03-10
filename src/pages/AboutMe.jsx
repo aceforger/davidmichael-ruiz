@@ -147,19 +147,29 @@ function AboutMe() {
       <BookTrailer />
 
       {/* Events Section */}
-      {/* <Events /> */}
+      <Events />
 
       {/* Gallery Section */}
       {/* <ImageGallery /> */}
 
       {/* Floating CTA Button */}
+      <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+      <button 
+        onClick={() => navigate('/more-about-david')}
+        className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full px-6 py-3 shadow-xl flex items-center gap-3 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
+      >
+        <FaBookOpen size={18} />
+        <span>Explore More</span>
+      </button>
+
       <button 
         onClick={() => navigate('/home')}
-        className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full px-6 py-3 shadow-xl flex items-center gap-3 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 z-50"
+        className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full px-6 py-3 shadow-xl flex items-center gap-3 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
       >
         <FaBookOpen size={18} />
         <span>Explore His Work</span>
       </button>
+    </div>
     </div>
   );
 }

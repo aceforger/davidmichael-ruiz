@@ -8,6 +8,7 @@ import BookShop from './pages/BookShop';
 import EBookShop from './pages/EBookShop';
 import AudioBookShop from './pages/AudioBookShop';
 import ContactUs from './pages/ContactUs';
+import More from './pages/More';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/ebook/:id" element={<EBookShop />} />
           <Route path="/audiobooks" element={<AudioBookShop />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/more-about-david" element={<More />} />
         </Routes>
       </Router>
     </div>
