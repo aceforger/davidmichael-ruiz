@@ -4,15 +4,18 @@ import { FaTimes } from 'react-icons/fa';
 const BookTrailer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(null);
+  const [isGoogleDrive, setIsGoogleDrive] = useState(false);
   
-  const playTrailer = (videoSrc) => {
+  const playTrailer = (videoSrc, isDrive = false) => {
     setCurrentVideo(videoSrc);
+    setIsGoogleDrive(isDrive);
     setIsPlaying(true);
   };
   
   const closeTrailer = () => {
     setIsPlaying(false);
     setCurrentVideo(null);
+    setIsGoogleDrive(false);
   };
   
   return (
@@ -32,7 +35,7 @@ const BookTrailer = () => {
             <div className="relative">
               <div 
                 className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group"
-                onClick={() => playTrailer('/images/jerim.mp4')}
+                onClick={() => playTrailer('/images/jerim.mp4', false)}
               >
                 <img 
                   src="/images/jerim.png" 
@@ -59,7 +62,7 @@ const BookTrailer = () => {
               <h3 className="text-2xl font-serif text-gray-800 mb-2">The Heart of Jerim</h3>
               <p className="text-gray-600 mb-4">Now available</p>
               <button 
-                onClick={() => playTrailer('/images/jerim.mp4')}
+                onClick={() => playTrailer('/images/jerim.mp4', false)}
                 className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
               >
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -75,7 +78,7 @@ const BookTrailer = () => {
             <div className="relative">
               <div 
                 className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group"
-                onClick={() => playTrailer('/images/always.mp4')}
+                onClick={() => playTrailer('/images/always.mp4', false)}
               >
                 <img 
                   src="/images/always.png" 
@@ -102,7 +105,7 @@ const BookTrailer = () => {
               <h3 className="text-2xl font-serif text-gray-800 mb-2">The Heart of Always</h3>
               <p className="text-gray-600 mb-4">Now available</p>
               <button 
-                onClick={() => playTrailer('/images/always.mp4')}
+                onClick={() => playTrailer('/images/always.mp4', false)}
                 className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
               >
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -118,7 +121,7 @@ const BookTrailer = () => {
             <div className="relative">
               <div 
                 className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group"
-                onClick={() => playTrailer('/images/tesfa.mp4')}
+                onClick={() => playTrailer('/images/tesfa.mp4', false)}
               >
                 <img 
                   src="/images/tesfa.png" 
@@ -145,7 +148,7 @@ const BookTrailer = () => {
               <h3 className="text-2xl font-serif text-gray-800 mb-2">The Heart of Tesfa</h3>
               <p className="text-gray-600 mb-4">Now available in stores and online</p>
               <button 
-                onClick={() => playTrailer('/images/tesfa.mp4')}
+                onClick={() => playTrailer('/images/tesfa.mp4', false)}
                 className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
               >
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -156,14 +159,12 @@ const BookTrailer = () => {
             </div>
           </div>
           
-          
-
-          {/* Peter */}
+          {/* Peter - Using Google Drive */}
           <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
             <div className="relative">
               <div 
                 className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group"
-                onClick={() => playTrailer('/images/soon.mp4')}
+                onClick={() => playTrailer('https://drive.google.com/file/d/1q4FRBETIXzZyJQFOyh_g8xt-1h-H3Cb5/preview', true)}
               >
                 <img 
                   src="/images/peter.png" 
@@ -180,8 +181,8 @@ const BookTrailer = () => {
                 </div>
                 
                 <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-lg font-medium">Coming Soon</p>
-                  <p className="text-sm opacity-90"></p>
+                  <p className="text-lg font-medium">Watch the Trailer</p>
+                  <p className="text-sm opacity-90">2:14</p>
                 </div>
               </div>
             </div>
@@ -190,28 +191,27 @@ const BookTrailer = () => {
               <h3 className="text-2xl font-serif text-gray-800 mb-2">The Hand of Peter</h3>
               <p className="text-gray-600 mb-4">Coming Soon</p>
               <button 
-                onClick={() => playTrailer('/images/soon.mp4')}
+                onClick={() => playTrailer('https://drive.google.com/file/d/1q4FRBETIXzZyJQFOyh_g8xt-1h-H3Cb5/view', true)}
                 className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
               >
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                 </svg>
-                Comming Soon
+                Watch Trailer
               </button>
             </div>
           </div>
 
-
-          {/* Angels */}
+          {/* Angels - Using Google Drive */}
           <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
             <div className="relative">
               <div 
                 className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group"
-                onClick={() => playTrailer('/images/soon.mp4')}
+                onClick={() => playTrailer('/images/soon.mp4', true)}
               >
                 <img 
                   src="/images/angels.png" 
-                  alt="The Hand of Peter" 
+                  alt="Touched by Angels" 
                   className="w-full h-[50vh] object-contain p-4 transition-transform duration-700 group-hover:scale-105"
                 />
                 
@@ -234,27 +234,27 @@ const BookTrailer = () => {
               <h3 className="text-2xl font-serif text-gray-800 mb-2">Touched by Angels</h3>
               <p className="text-gray-600 mb-4">Coming Soon</p>
               <button 
-                onClick={() => playTrailer('/images/soon.mp4')}
+                onClick={() => playTrailer('/images/soon.mp4', true)}
                 className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
               >
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                 </svg>
-                Comming Soon
+                Coming Soon
               </button>
             </div>
           </div>
 
-          {/* Africa */}
+          {/* Africa - Using Google Drive */}
           <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
             <div className="relative">
               <div 
                 className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group"
-                onClick={() => playTrailer('/images/soon.mp4')}
+                onClick={() => playTrailer('/images/soon.mp4', true)}
               >
                 <img 
                   src="/images/africa.png" 
-                  alt="The Hand of Peter" 
+                  alt="Out of Africa" 
                   className="w-full h-[50vh] object-contain p-4 transition-transform duration-700 group-hover:scale-105"
                 />
                 
@@ -277,17 +277,16 @@ const BookTrailer = () => {
               <h3 className="text-2xl font-serif text-gray-800 mb-2">Out of Africa</h3>
               <p className="text-gray-600 mb-4">Coming Soon</p>
               <button 
-                onClick={() => playTrailer('/images/soon.mp4')}
+                onClick={() => playTrailer('/images/soon.mp4', true)}
                 className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
               >
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                 </svg>
-                Comming Soon
+                Coming Soon
               </button>
             </div>
           </div>
-
         </div>
         
         <div className="bg-white rounded-xl shadow-lg p-8">
@@ -388,7 +387,7 @@ const BookTrailer = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* The Heart of Jerim */}
+            {/* The Hand of Peter */}
             <div className="flex flex-col h-full">
               <h4 className="text-xl font-medium text-gray-800 mb-3 flex items-center">
                 <svg className="w-5 h-5 mr-2 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -397,17 +396,17 @@ const BookTrailer = () => {
                 <span className="font-serif">The Hand of Peter</span>
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed">
-                It follows the life of Pedro, a young boy born in poverty in a small town in Nicaragua. His father is killed the day he is born allowing for his life to progress without the influence of the ‘macho’ culture of his father. He lives a happy life with his mother, oldest sister, and his two brothers. He establishes a close relationship to the Village Catholic Priest. 
+                It follows the life of Pedro, a young boy born in poverty in a small town in Nicaragua. His father is killed the day he is born allowing for his life to progress without the influence of the 'macho' culture of his father. He lives a happy life with his mother, oldest sister, and his two brothers. He establishes a close relationship to the Village Catholic Priest. 
 
 
-                His mother is introduced to a friend of the priest, an electrical engineer with severe depression. They become a family. A few years later a great tragedy befalls the family. The priest is killed; Pedro’s father is injured. Pedro is severely injured, and the injury will follow him throughout is life. But through this event he is joined with the assailant’s son, and they become lifelong friends who become priest. 
+                His mother is introduced to a friend of the priest, an electrical engineer with severe depression. They become a family. A few years later a great tragedy befalls the family. The priest is killed; Pedro's father is injured. Pedro is severely injured, and the injury will follow him throughout is life. But through this event he is joined with the assailant's son, and they become lifelong friends who become priest. 
 
 
                 Their journey takes them through times of torture for their faith eventually leading them to Rome and the pinnacle of the Catholic Church. But the journey not only includes tragedy, but closeness to family, deep religious growth and defense of their faith. They touch so many lives. The family is the key to the strength and faith of Pedro and his companion, Pancho.
               </p>
             </div>
             
-            {/* The Heart of Always */}
+            {/* Touched by Angels */}
             <div className="flex flex-col h-full">
               <h4 className="text-xl font-medium text-gray-800 mb-3 flex items-center">
                 <svg className="w-5 h-5 mr-2 text-indigo-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -426,7 +425,7 @@ const BookTrailer = () => {
               </p>
             </div>
             
-            {/* The Heart of Tesfa */}
+            {/* Out of Africa */}
             <div className="flex flex-col h-full">
               <h4 className="text-xl font-medium text-gray-800 mb-3 flex items-center">
                 <svg className="w-5 h-5 mr-2 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -454,7 +453,7 @@ const BookTrailer = () => {
           </div>
         </div>
         
-        {/* Video Modal */}
+        {/* Video Modal - Updated to support both video files and Google Drive iframes */}
         {isPlaying && (
           <div className="fixed inset-0 bg-black/95 z-[1000] flex items-center justify-center p-5 backdrop-blur-sm">
             <button 
@@ -465,15 +464,26 @@ const BookTrailer = () => {
             </button>
             
             <div className="relative w-full max-w-4xl aspect-video">
-              <video 
-                className="w-full h-full rounded-lg"
-                controls
-                autoPlay
-                playsInline
-              >
-                <source src={currentVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {isGoogleDrive ? (
+                <iframe
+                  src={currentVideo}
+                  className="w-full h-full rounded-lg"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                  title="Video player"
+                />
+              ) : (
+                <video 
+                  className="w-full h-full rounded-lg"
+                  controls
+                  autoPlay
+                  playsInline
+                  key={currentVideo}
+                >
+                  <source src={currentVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
           </div>
         )}
